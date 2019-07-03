@@ -1,6 +1,6 @@
 import scala.collection.immutable.Stream
 object HelloWorld extends App {
-  println("Hello Niran")
+  println("Hello Niran how r u")
 
   val lst = List ( 2,4,6,8,0)
   val strm = (1 to 1000).toStream
