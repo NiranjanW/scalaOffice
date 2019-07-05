@@ -41,5 +41,25 @@ object Sorting extends App {
 
    }
 
+
   }
+
+  def quickSort(xs :Array[Int]) : Array[Int] = {
+
+   var r = scala.util.Random
+
+   val randomArray = (for( i <- 1 to 10000) yield r.nextInt(100)).toArray
+    val  pivot = xs(xs.length/2)
+
+     if (xs.length <=1) xs
+    else {
+      Array.concat(quickSort(xs filter (pivot >)),
+        xs filter (pivot ==),
+        quickSort(xs filter (pivot <))
+      )
+    }
+  }
+
+
+
 }
